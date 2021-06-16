@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="style.css" />
+        <title>Send Arbitrary Webhooks for Debugging GTM Client Templates</title>
+        <meta name="description" content="Click to send arbitrary webhooks for debugging server-side GTM clients that listen for webhooks" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="main-head">
+                <h1>Send Arbitrary Webhooks for Debugging GTM Client Templates</h1>
+            </header>
+            <nav class="main-nav">
+                <ul>
+                    <li>Brought to you by <a href="https://caretjuice.com/">Caret Juice</a></li>
+                </ul>
+            </nav>
+            <h2>Send Webhook</h2>
+            <article class="content">
+                <form id="send_webhook">
+                    <label for="url">Destination URL</label>
+                    <input type="url" id="destination_url" name="destination_url" />
+                    <label for="json">Webhook JSON to Send</label>
+                    <input type="text" id="json_to_send" name="json_to_send" />
+                    <input type="submit" class="submit" id="submit_webhook" name="submit_webhook" />
+                </form>
+
+            </article>
+            <aside class="side">
+                <h2>Log</h2>
+                <div id="log">Start</div>
+            </aside>
+    </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+.main-head {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+}
+.main-nav {
+    grid-area: nav;
+}
+.side {
+    grid-area: sidebar;
+}
+.main-footer {
+    grid-area: footer;
+}
+
+.wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "sidebar"
+      "ad"
+      "footer";
+}
+
+@media (min-width: 500px) {
+    .wrapper {
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas:
+        "header  header"
+        "nav     nav"
+        "content sidebar";
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+}
+
+form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px
+}
+label {
+    grid-column: 1 / 2;
+}
+ 
+input,
+button {
+    grid-column: 2 / 3;
+}
