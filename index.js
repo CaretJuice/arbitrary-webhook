@@ -27,6 +27,14 @@ window.addEventListener( "load", function () {
   
       // The data sent is what the user provided in the form
       xhr.send( json.stringify(json) );
+
+          //listen for response
+    xhr.onreadystatechange=(e) =>{
+      log( xhr.statusText );
+      log( xhr.responseURL );
+      log( xhr.responseType );
+      log( xhr.responseBody );
+  }
       
     }
   
@@ -41,11 +49,4 @@ window.addEventListener( "load", function () {
       sendWebhookData();
     } );
 
-    //listen for response
-    xhr.onreadystatechange=(e) =>{
-        log( xhr.statusText );
-        log( xhr.responseURL );
-        log( xhr.responseType );
-        log( xhr.responseBody );
-    }
 } );
