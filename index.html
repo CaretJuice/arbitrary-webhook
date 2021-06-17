@@ -20,11 +20,11 @@
             </nav>
             <h2>Send Webhook</h2>
             <article class="content">
-                <form id="send_webhook">
+                <form id="send_webhook" method="POST">
                     <label for="url">Destination URL</label>
                     <input type="url" id="destination_url" name="destination_url" />
                     <label for="json">Webhook JSON to Send</label>
-                    <input type="text" id="json_to_send" name="json_to_send" />
+                    <textarea id="json_to_send" name="json_to_send" ></textarea>
                     <input type="submit" class="submit" id="submit_webhook" name="submit_webhook" />
                 </form>
 

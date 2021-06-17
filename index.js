@@ -1,8 +1,28 @@
-
-console.log("Load function ready");
 const log = msg => {
     document.getElementById('log').innerHTML += msg + "\n";
 };
+
+
+window.addEventListener("DOMContentLoaded", function () {
+    // Access the form element...
+  const form = document.getElementById( "send_webhook" );
+
+  // ...and take over its submit event.
+  document.getElementById("submit_webhook").addEventListener( "click", function ( event ) {
+    console.log("Submitting form");
+    form.sendWebhookData();
+    event.preventDefault();
+  } );
+});
+// Access the form element...
+const form = document.getElementById( "send_webhook" );
+
+// ...and take over its submit event.
+document.getElementById("submit_webhook").addEventListener( "click", function ( event ) {
+  console.log("Submitting form");
+  form.sendWebhookData();
+  event.preventDefault();
+} );
 
 function sendWebhookData() {
   const xhr = new XMLHttpRequest();
@@ -44,14 +64,3 @@ function sendWebhookData() {
   }
   
 }
-
-// Access the form element...
-const form = document.getElementById( "send_webhook" );
-
-
-// ...and take over its submit event.
-document.getElementById("submit_webhook")( "click", function ( event ) {
-  console.log("Submitting form");
-  form.sendWebhookData();
-  event.preventDefault();
-} );
