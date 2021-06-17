@@ -44,16 +44,15 @@ window.addEventListener( "load", function () {
     }
     
   }
-  
-  // Access the form element...
-  const form = document.getElementById( "send_webhook" );
 
-  
-  // ...and take over its submit event.
-  form.addEventListener( "submit_webhook", function ( event ) {
-    console.log("Submitting form");
-    sendWebhookData();
-    event.preventDefault();
-  });
+});
+// Access the form element...
+const form = document.getElementById( "send_webhook" );
 
+
+// ...and take over its submit event.
+form.addEventListener( "submit_webhook", function ( event ) {
+  console.log("Submitting form");
+  sendWebhookData();
+  event.preventDefault();
 });
