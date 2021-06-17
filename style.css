@@ -53,3 +53,15 @@ input,
 button {
     grid-column: 2 / 3;
 }
+
+.result {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .inactive {
+    display: none;
+  }

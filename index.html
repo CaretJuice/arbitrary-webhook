@@ -20,14 +20,19 @@
             </nav>
             <h2>Send Webhook</h2>
             <article class="content">
-                <form id="send_webhook" method="POST">
+                <form id="send_webhook" name="send_webhook" method="POST" netlify>
                     <label for="url">Destination URL</label>
                     <input type="url" id="destination_url" name="destination_url" />
                     <label for="json">Webhook JSON to Send</label>
                     <textarea id="json_to_send" name="json_to_send" ></textarea>
                     <input type="submit" class="submit" id="submit_webhook" name="submit_webhook" />
                 </form>
-
+                  <div class="result post-sent">
+                    <h3>Success!</h3>
+                  </div>
+                  <div class="result post-error">
+                    <h3>Error...</h3>
+                  </div>
             </article>
             <aside class="side">
                 <h2>Log</h2>
