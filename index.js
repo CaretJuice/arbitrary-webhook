@@ -33,10 +33,10 @@ function sendFormData() {
     e.preventDefault()
     sendData()
   })
+  log( XHR.statusText );
+  log( XHR.responseURL );
+  log( XHR.responseType );
+  log( XHR.responseBody );
 
 }
 
-log( XHR.statusText );
-log( XHR.responseURL );
-log( XHR.responseType );
-log( XHR.responseBody );
